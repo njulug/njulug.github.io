@@ -1,58 +1,67 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="zh-CN" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>openSUSE 源使用帮助 &mdash; NJU Mirror Help  文档</title>
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
   
+  
+
   
   
 
   
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'zh_CN',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  false,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="索引"
-              href="genindex.html"/>
-        <link rel="search" title="搜索" href="search.html"/>
-    <link rel="top" title="NJU Mirror Help  文档" href="index.html"/>
-        <link rel="next" title="Raspbian 源使用帮助" href="raspbian.html"/>
-        <link rel="prev" title="Manjaro Linux 源使用帮助" href="manjaro.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    
+    <link rel="author" title="关于这些文档" href="about.html" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Raspbian 源使用帮助" href="raspbian.html" />
+    <link rel="prev" title="Manjaro Linux 源使用帮助" href="manjaro.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -76,6 +85,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -150,7 +160,7 @@
 <li class="toctree-l1"><a class="reference internal" href="archive.raspberrypi.org.html">Raspberrypi 源使用帮助</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="todo.html">TODO List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">关于本站</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contributor.html">贡献者</a></li>
@@ -159,13 +169,14 @@
             
           
         </div>
+        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">NJU Mirror Help</a>
@@ -173,10 +184,13 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
 
 
 
@@ -196,14 +210,14 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>openSUSE 源使用帮助</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/njulug/mirrorhelp/blob/master/source/opensuse.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -242,11 +256,11 @@
 <p class="last">以下配置方法适用于从未自行配置软件源的用户，其他用户请根据具体情况自行配置 ，以下仅供参考。</p>
 </div>
 <p>禁用原有软件源；</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">zypper</span> <span class="n">mr</span> <span class="o">-</span><span class="n">da</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">zypper</span> <span class="n">mr</span> <span class="o">-</span><span class="n">da</span>
 </pre></div>
 </div>
 <p>添加南大镜像源，以 openSUSE Leap 42.3 为例；</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">zypper</span> <span class="n">ar</span> <span class="o">-</span><span class="n">fc</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">opensuse</span><span class="o">/</span><span class="n">distribution</span><span class="o">/</span><span class="n">leap</span><span class="o">/</span><span class="mf">42.3</span><span class="o">/</span><span class="n">repo</span><span class="o">/</span><span class="n">oss</span> <span class="n">NJU</span><span class="p">:</span><span class="mf">42.3</span><span class="p">:</span><span class="n">OSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">zypper</span> <span class="n">ar</span> <span class="o">-</span><span class="n">fc</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">opensuse</span><span class="o">/</span><span class="n">distribution</span><span class="o">/</span><span class="n">leap</span><span class="o">/</span><span class="mf">42.3</span><span class="o">/</span><span class="n">repo</span><span class="o">/</span><span class="n">oss</span> <span class="n">NJU</span><span class="p">:</span><span class="mf">42.3</span><span class="p">:</span><span class="n">OSS</span>
 <span class="n">sudo</span> <span class="n">zypper</span> <span class="n">ar</span> <span class="o">-</span><span class="n">fc</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">opensuse</span><span class="o">/</span><span class="n">distribution</span><span class="o">/</span><span class="n">leap</span><span class="o">/</span><span class="mf">42.3</span><span class="o">/</span><span class="n">repo</span><span class="o">/</span><span class="n">non</span><span class="o">-</span><span class="n">oss</span> <span class="n">NJU</span><span class="p">:</span><span class="mf">42.3</span><span class="p">:</span><span class="n">NON</span><span class="o">-</span><span class="n">OSS</span>
 <span class="n">sudo</span> <span class="n">zypper</span> <span class="n">ar</span> <span class="o">-</span><span class="n">fc</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">opensuse</span><span class="o">/</span><span class="n">update</span><span class="o">/</span><span class="n">leap</span><span class="o">/</span><span class="mf">42.3</span><span class="o">/</span><span class="n">oss</span> <span class="n">NJU</span><span class="p">:</span><span class="mf">42.3</span><span class="p">:</span><span class="n">UPDATE</span><span class="o">-</span><span class="n">OSS</span>
 <span class="n">sudo</span> <span class="n">zypper</span> <span class="n">ar</span> <span class="o">-</span><span class="n">fc</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">opensuse</span><span class="o">/</span><span class="n">update</span><span class="o">/</span><span class="n">leap</span><span class="o">/</span><span class="mf">42.3</span><span class="o">/</span><span class="n">non</span><span class="o">-</span><span class="n">oss</span> <span class="n">NJU</span><span class="p">:</span><span class="mf">42.3</span><span class="p">:</span><span class="n">UPDATE</span><span class="o">-</span><span class="n">NON</span><span class="o">-</span><span class="n">OSS</span>
@@ -254,7 +268,7 @@
 </div>
 <p>命令中最后一个参数为每一个源指定了一个 alias （别称），可以根据个人喜好更改。</p>
 <p>手动刷新软件源</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">zypper</span> <span class="n">ref</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">zypper</span> <span class="n">ref</span>
 </pre></div>
 </div>
 </div>
@@ -305,32 +319,31 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           
 <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="raspbian.html" class="btn btn-neutral float-right" title="Raspbian 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="manjaro.html" class="btn btn-neutral" title="Manjaro Linux 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="raspbian.html" class="btn btn-neutral float-right" title="Raspbian 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="manjaro.html" class="btn btn-neutral float-left" title="Manjaro Linux 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright  2019. 	  https://github.com/njulug/mirrorhelp 	   .
+        &#169; 版权所有  2021. 	  https://github.com/njulug/mirrorhelp 	   .
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
 <p>除额外注明的地方外，本文档按 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议发布。</p>
 <script>
 var _hmt = _hmt || [];
@@ -345,7 +358,6 @@ var _hmt = _hmt || [];
 
 
 </footer>
-
         </div>
       </div>
 
@@ -354,38 +366,15 @@ var _hmt = _hmt || [];
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>
