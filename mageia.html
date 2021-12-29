@@ -146,17 +146,13 @@
 <li class="toctree-l1"><a class="reference internal" href="hackage.html">Hackage 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pypi.html">PyPI 镜像源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rubygems.html">Rubygems 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-crates.html">Rust Crates 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dockerhub.html">Docker Hub 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qt.html">QT 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archive.raspberrypi.org.html">Raspberrypi 源使用帮助</a></li>
@@ -261,7 +257,7 @@
 <span class="n">urpmi</span><span class="o">.</span><span class="n">removemedia</span> <span class="o">-</span><span class="n">a</span>
 </pre></div>
 </div>
-<p>添加南大的软件源，以 Mageia 6，x86_64 架构为例：</p>
+<p>添加NJU的软件源，以 Mageia 6，x86_64 架构为例：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">su</span>
 <span class="n">urpmi</span><span class="o">.</span><span class="n">addmedia</span> <span class="o">--</span><span class="n">distrib</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">mageia</span><span class="o">/</span><span class="n">distrib</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="n">x86_64</span>
 </pre></div>
@@ -290,7 +286,7 @@
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">为了让 dnf 能在南大软件源出现问题时，自动切换至其它后备软件源，我们不建议你注释掉 mirrorlist 行。</p>
+<p class="last">为了让 dnf 能在NJU软件源出现问题时，自动切换至其它后备软件源，我们不建议你注释掉 mirrorlist 行。</p>
 </div>
 <p>为了避免 dnf 和 urpmi 启用的软件仓库不一致，在保存之前，还需要额外进行检查，查看 urpmi 已启用仓库的方法如下：</p>
 <ul class="simple">

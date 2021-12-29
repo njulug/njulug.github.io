@@ -145,17 +145,13 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pypi.html">PyPI 镜像源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rubygems.html">Rubygems 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-crates.html">Rust Crates 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dockerhub.html">Docker Hub 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qt.html">QT 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archive.raspberrypi.org.html">Raspberrypi 源使用帮助</a></li>
@@ -245,6 +241,27 @@
 <div class="section" id="stack">
 <h2>stack使用说明<a class="headerlink" href="#stack" title="永久链接至标题">¶</a></h2>
 <p>编辑 <code class="docutils literal notranslate"><span class="pre">~/.stack/config.yaml</span></code>, 增加下列参数</p>
+<p>&gt;=v2.1.1:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">package</span><span class="o">-</span><span class="n">indices</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">download</span><span class="o">-</span><span class="n">prefix</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">hackage</span><span class="o">/</span>
+  <span class="n">hackage</span><span class="o">-</span><span class="n">security</span><span class="p">:</span>
+    <span class="n">keyids</span><span class="p">:</span>
+    <span class="o">-</span> <span class="mi">0</span><span class="n">a5c7ea47cd1b15f01f5f51a33adda7e655bc0f0b0615baa8e271f4c3351e21d</span>
+    <span class="o">-</span> <span class="mi">1</span><span class="n">ea9ba32c526d1cc91ab5e5bd364ec5e9e8cb67179a471872f6e26f0ae773d42</span>
+    <span class="o">-</span> <span class="mi">280</span><span class="n">b10153a522681163658cb49f632cde3f38d768b736ddbc901d99a1a772833</span>
+    <span class="o">-</span> <span class="mi">2</span><span class="n">a96b1889dc221c17296fcc2bb34b908ca9734376f0f361660200935916ef201</span>
+    <span class="o">-</span> <span class="mi">2</span><span class="n">c6c3627bd6c982990239487f1abd02e08a02e6cf16edb105a8012d444d870c3</span>
+    <span class="o">-</span> <span class="mi">51</span><span class="n">f0161b906011b52c6613376b1ae937670da69322113a246a09f807c62f6921</span>
+    <span class="o">-</span> <span class="mf">772e9</span><span class="n">f4c7db33d251d5c6e357199c819e569d130857dc225549b40845ff0890d</span>
+    <span class="o">-</span> <span class="n">aa315286e6ad281ad61182235533c41e806e5a787e0b6d1e7eef3f09d137d2e9</span>
+    <span class="o">-</span> <span class="n">fe331502606802feac15e514d9b9ea83fee8b6ffef71335479a2e68d84adc6b0</span>
+    <span class="n">key</span><span class="o">-</span><span class="n">threshold</span><span class="p">:</span> <span class="mi">3</span> <span class="c1"># number of keys required</span>
+
+    <span class="c1"># ignore expiration date, see https://github.com/commercialhaskell/stack/pull/4614</span>
+    <span class="n">ignore</span><span class="o">-</span><span class="n">expiry</span><span class="p">:</span> <span class="n">true</span>
+</pre></div>
+</div>
+<p>&lt;v2.1.1:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">package</span><span class="o">-</span><span class="n">indices</span><span class="p">:</span>
   <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">NJU</span>
     <span class="n">download</span><span class="o">-</span><span class="n">prefix</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">hackage</span><span class="o">/</span><span class="n">package</span><span class="o">/</span>
@@ -268,9 +285,10 @@
   <span class="o">--</span> <span class="n">keys</span><span class="o">-</span><span class="n">threshold</span><span class="p">:</span> <span class="mi">3</span>
 </pre></div>
 </div>
-<p>改为南大源:</p>
+<p>改为NJU源:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">repository</span> <span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span>
   <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">hackage</span><span class="o">/</span>
+  <span class="n">secure</span><span class="p">:</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -280,7 +298,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">remote</span><span class="o">-</span><span class="n">repo</span><span class="p">:</span> <span class="n">hackage</span><span class="o">.</span><span class="n">haskell</span><span class="o">.</span><span class="n">org</span><span class="p">:</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">hackage</span><span class="o">.</span><span class="n">haskell</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">archive</span>
 </pre></div>
 </div>
-<p>改为南大源:</p>
+<p>改为NJU源:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">remote</span><span class="o">-</span><span class="n">repo</span><span class="p">:</span> <span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="p">:</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">hackage</span><span class="o">/</span>
 </pre></div>
 </div>

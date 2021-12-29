@@ -98,9 +98,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">AOSC OS 源使用帮助</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">使用说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">相关链接</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="archlinux.html">Arch Linux 源使用帮助</a></li>
@@ -141,17 +140,13 @@
 <li class="toctree-l1"><a class="reference internal" href="hackage.html">Hackage 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pypi.html">PyPI 镜像源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rubygems.html">Rubygems 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-crates.html">Rust Crates 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dockerhub.html">Docker Hub 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qt.html">QT 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archive.raspberrypi.org.html">Raspberrypi 源使用帮助</a></li>
@@ -236,65 +231,31 @@
 </div>
 <div class="section" id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>AOSC OS（安同 OS）软件源</p>
+<p>AOSC OS（安同 OS）软件源。AOSC OS 是一个由安同开源社区（<a class="reference external" href="https://aosc.io">https://aosc.io</a>）开发的半滚动 Linux 发行版，支持多种处理器架构。</p>
 </div>
 <div class="section" id="id3">
-<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>AOSC OS 支持的所有架构，包括：</p>
-<ul class="simple">
-<li>AMD64（x86_64）</li>
-<li>ARM<ul>
-<li>ARMv7（armel）</li>
-<li>ARMv8（arm64, aarch64）</li>
-</ul>
-</li>
-<li>MIPS<ul>
-<li>mipsel</li>
-<li>mips64el</li>
-</ul>
-</li>
-<li>PowerPC<ul>
-<li>powerpc（ppc32）</li>
-<li>ppc64</li>
-</ul>
-</li>
-</ul>
+<h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>AOSC OS 内置 <code class="docutils literal notranslate"><span class="pre">apt-gen-list</span></code> 工具来开关社区提供的可用镜像源。要启用 NJU 源，执行：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">gen</span><span class="o">-</span><span class="nb">list</span> <span class="n">add</span><span class="o">-</span><span class="n">mirror</span> <span class="n">nju</span>
+</pre></div>
+</div>
+<p>要仅启用 NJU 源，执行：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">gen</span><span class="o">-</span><span class="nb">list</span> <span class="nb">set</span><span class="o">-</span><span class="n">mirror</span> <span class="n">nju</span>
+</pre></div>
+</div>
+<p>关于 <code class="docutils literal notranslate"><span class="pre">apt-gen-list</span></code> 的语义和详细用法，请执行 <code class="docutils literal notranslate"><span class="pre">apt-gen-list</span> <span class="pre">help</span></code> 查看帮助。</p>
 </div>
 <div class="section" id="id4">
-<h2>使用说明<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>AOSC OS 内置 <code class="docutils literal notranslate"><span class="pre">apt-gen-list</span></code> 工具来开关镜像源。要使用 NJU 源，执行：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">gen</span><span class="o">-</span><span class="nb">list</span> <span class="o">-</span><span class="n">e</span> <span class="mi">10</span><span class="o">-</span><span class="n">nju</span>
-</pre></div>
-</div>
-<p>注意目前这将关闭其它镜像源。详细用法请执行 <code class="docutils literal notranslate"><span class="pre">apt-gen-list</span> <span class="pre">-h</span></code> 获取。</p>
-<p>当然，也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件。对于任一架构 <code class="docutils literal notranslate"><span class="pre">${ARCH}</span></code>，需要在 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 中同时写入：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>deb https://mirrors.nju.edu.cn/anthon/os-${ARCH}/os3-dpkg/ /
-deb https://mirrors.nju.edu.cn/anthon/os-noarch/os3-dpkg/ /
-</pre></div>
-</div>
-<p>其中 <code class="docutils literal notranslate"><span class="pre">${ARCH}</span></code> 可以是：</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">amd64</span></code> （x86_64）</li>
-<li><code class="docutils literal notranslate"><span class="pre">armel</span></code> （ARMv7）</li>
-<li><code class="docutils literal notranslate"><span class="pre">arm64</span></code> （ARMv8）</li>
-<li><code class="docutils literal notranslate"><span class="pre">mipsel</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">mips64el</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">powerpc</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ppc64</span></code></li>
-</ul>
-<p>执行完上面任一步骤后，请运行 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 更新索引以生效。</p>
-</div>
-<div class="section" id="id5">
-<h2>相关链接<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<h2>相关链接<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">官方主页:</th><td class="field-body"><a class="reference external" href="https://aosc.io">https://aosc.io</a></td>
 </tr>
-<tr class="field-even field"><th class="field-name">文档:</th><td class="field-body"><a class="reference external" href="https://github.com/AOSC-Dev/aosc-os/wiki">https://github.com/AOSC-Dev/aosc-os/wiki</a></td>
+<tr class="field-even field"><th class="field-name">文档:</th><td class="field-body"><a class="reference external" href="https://wiki.aosc.io">https://wiki.aosc.io</a></td>
 </tr>
-<tr class="field-odd field"><th class="field-name">镜像列表:</th><td class="field-body"><a class="reference external" href="https://aosc.io/about">https://aosc.io/about</a></td>
+<tr class="field-odd field"><th class="field-name">镜像列表:</th><td class="field-body"><a class="reference external" href="https://aosc.io/repo">https://aosc.io/repo</a></td>
 </tr>
 </tbody>
 </table>

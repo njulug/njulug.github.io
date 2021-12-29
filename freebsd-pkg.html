@@ -142,17 +142,13 @@
 <li class="toctree-l1"><a class="reference internal" href="hackage.html">Hackage 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pypi.html">PyPI 镜像源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rubygems.html">Rubygems 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-crates.html">Rust Crates 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dockerhub.html">Docker Hub 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qt.html">QT 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archive.raspberrypi.org.html">Raspberrypi 源使用帮助</a></li>
@@ -233,43 +229,36 @@
 <h1>FreeBSD pkg 源使用帮助<a class="headerlink" href="#freebsd-pkg" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
 <h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="http://mirrors.nju.edu.cn/freebsd-pkg/">http://mirrors.nju.edu.cn/freebsd-pkg/</a></p>
+<p><a class="reference external" href="https://mirrors.nju.edu.cn/freebsd-pkg/">https://mirrors.nju.edu.cn/freebsd-pkg/</a></p>
 </div>
 <div class="section" id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>FreeBSD pkg 软件源</p>
+<p>FreeBSD 预编译软件包镜像</p>
 </div>
 <div class="section" id="id3">
 <h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>i386, amd64, aarch64, armv6, mips, mips64</p>
+<p>所有受官方支持的架构，当前稳定版 FreeBSD 11 支持的架构包括 amd64, i386, armv6, aarch64, mips, mips64。</p>
 </div>
 <div class="section" id="id4">
 <h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>10, 11, 12</p>
+<p>自 FreeBSD 10 以后的版本，包括 quarterly 和滚动更新的 latest 仓库。</p>
+<p>FreeBSD 9 以前的版本不支持新的 pkg 包管理器（pkgng），请升级到新版。</p>
 </div>
 <div class="section" id="id5">
 <h2>使用方法<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<p>创建用户级 pkg 源目录</p>
-<blockquote>
-<div><code class="file docutils literal notranslate"><span class="pre">/usr/local/etc/pkg/repos</span></code></div></blockquote>
-<p>新建源文件</p>
-<blockquote>
-<div><code class="file docutils literal notranslate"><span class="pre">/usr/local/etc/pkg/repos/1.nju.conf</span></code></div></blockquote>
-<p>在 <code class="file docutils literal notranslate"><span class="pre">1.nju.conf</span></code> 中添加以下内容：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nju</span><span class="p">:</span> <span class="p">{</span>
-  <span class="n">url</span><span class="p">:</span> <span class="s2">&quot;pkg+http://mirrors.nju.edu.cn/freebsd-pkg/$</span><span class="si">{ABI}</span><span class="s2">/latest&quot;</span><span class="p">,</span>
-  <span class="n">mirror_type</span><span class="p">:</span> <span class="s2">&quot;srv&quot;</span><span class="p">,</span>
-  <span class="n">signature_type</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
-  <span class="n">fingerprints</span><span class="p">:</span> <span class="s2">&quot;/usr/share/keys/pkg&quot;</span><span class="p">,</span>
-  <span class="n">enabled</span><span class="p">:</span> <span class="n">yes</span>
+<p>FreeBSD pkg 包管理器的官方源配置是 <code class="file docutils literal notranslate"><span class="pre">/etc/pkg/FreeBSD.conf</span></code> ，请先检查该文件内容。注意其中的 <code class="docutils literal notranslate"><span class="pre">url</span></code> 参数配置了官方仓库的地址，我们需要把它替换为镜像站的地址。</p>
+<p>该配置文件是 FreeBSD 基本系统的一部分，会随着 <code class="docutils literal notranslate"><span class="pre">freebsd-update</span></code> 更新，请不要直接修改，而是创建 <code class="file docutils literal notranslate"><span class="pre">/usr/local/etc/pkg/repos/FreeBSD.conf</span></code> 覆盖配置，文件内容如下：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FreeBSD</span><span class="p">:</span> <span class="p">{</span>
+  <span class="n">url</span><span class="p">:</span> <span class="s2">&quot;pkg+http://mirrors.nju.edu.cn/freebsd-pkg/$</span><span class="si">{ABI}</span><span class="s2">/quarterly&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>禁用系统级 pkg 源（推荐）</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pkg</span><span class="o">/</span><span class="n">FreeBSD</span><span class="o">.</span><span class="n">conf</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pkg</span><span class="o">/</span><span class="n">FreeBSD</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">back</span>
-</pre></div>
+<p>如果要使用滚动更新的 latest 仓库，把 <code class="docutils literal notranslate"><span class="pre">url</span></code> 配置最后的 <code class="docutils literal notranslate"><span class="pre">quarterly</span></code> 换成 <code class="docutils literal notranslate"><span class="pre">latest</span></code> 即可。</p>
+<p>修改配置后，运行 <code class="docutils literal notranslate"><span class="pre">pkg</span> <span class="pre">update</span> <span class="pre">-f</span></code> 更新索引。</p>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p class="last">使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装 <code class="docutils literal notranslate"><span class="pre">security/ca_root_nss</span></code> 软件包。</p>
 </div>
-<p>然后运行 <code class="docutils literal notranslate"><span class="pre">pkg</span> <span class="pre">update</span> <span class="pre">-f</span></code> 更新索引以生效。</p>
 </div>
 <div class="section" id="id6">
 <h2>相关链接<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>

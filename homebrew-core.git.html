@@ -49,9 +49,7 @@
     
     <link rel="author" title="关于这些文档" href="about.html" />
     <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Homebrew Cask 源使用帮助" href="homebrew-cask.git.html" />
-    <link rel="prev" title="Homebrew Bottles 源使用帮助" href="homebrew-bottles.html" /> 
+    <link rel="search" title="搜索" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -134,24 +132,13 @@
 <li class="toctree-l1"><a class="reference internal" href="hackage.html">Hackage 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pypi.html">PyPI 镜像源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rubygems.html">Rubygems 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-crates.html">Rust Crates 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
 </ul>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dockerhub.html">Docker Hub 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Homebrew Core 源使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">使用说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">相关镜像</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qt.html">QT 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archive.raspberrypi.org.html">Raspberrypi 源使用帮助</a></li>
@@ -241,14 +228,42 @@
 <div class="section" id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>替换 NJU 镜像：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="s2">&quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">core</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.nju.edu.cn/homebrew-core.git&quot;</span>
+<span class="n">brew</span> <span class="n">update</span>
 </pre></div>
 </div>
-<p>重置为官方地址：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="s2">&quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">core</span>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>若用户设置了环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_CORE_GIT_REMOTE</span></code>，则每次运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 时将会自动设置远程。
+推荐用户将环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_CORE_GIT_REMOTE</span></code> 加入 shell 的 profile 设置中。</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 对于 bash 用户</span>
+<span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.nju.edu.cn/homebrew-core.git&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bash_profile</span>
+
+<span class="c1"># 对于 zsh 用户</span>
+<span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.nju.edu.cn/homebrew-core.git&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
 </pre></div>
+</div>
+</div>
+<p>重置为官方地址：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unset</span> <span class="n">HOMEBREW_CORE_GIT_REMOTE</span>
+<span class="n">brew</span> <span class="n">tap</span> <span class="o">--</span><span class="n">custom</span><span class="o">-</span><span class="n">remote</span> <span class="n">homebrew</span><span class="o">/</span><span class="n">core</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">core</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">若出现 <code class="docutils literal notranslate"><span class="pre">Error:</span> <span class="pre">invalid</span> <span class="pre">option:</span> <span class="pre">--custom-remote</span></code> 错误，请先运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 将 <code class="docutils literal notranslate"><span class="pre">brew</span></code> 更新至 3.2.17 或以上版本。
+重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_CORE_GIT_REMOTE</span></code> 以免运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 时远程再次被更换。</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>Linuxbrew 核心仓库（<code class="docutils literal notranslate"><span class="pre">linuxbrew-core</span></code>）自 2021 年 10 月 25 日（<code class="docutils literal notranslate"><span class="pre">brew</span></code> 版本 3.3.0 起）被弃用，Linuxbrew 用户应迁移至 <code class="docutils literal notranslate"><span class="pre">homebrew-core</span></code>。
+Linuxbrew 用户请依本镜像说明重新设置镜像。注意迁移前请先运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 将 <code class="docutils literal notranslate"><span class="pre">brew</span></code> 更新至 3.3.0 或以上版本。
+迁移过程中若出现任何问题，可使用如下命令重新安装 <code class="docutils literal notranslate"><span class="pre">homebrew-core</span></code>：</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.nju.edu.cn/homebrew-core.git&quot;</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="s2">&quot;$(brew --repo homebrew/core)&quot;</span>
+<span class="n">brew</span> <span class="n">tap</span> <span class="o">--</span><span class="n">custom</span><span class="o">-</span><span class="n">remote</span> <span class="o">--</span><span class="n">force</span><span class="o">-</span><span class="n">auto</span><span class="o">-</span><span class="n">update</span> <span class="n">homebrew</span><span class="o">/</span><span class="n">core</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">core</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="id4">
@@ -256,6 +271,8 @@
 <ul class="simple">
 <li><a class="reference internal" href="brew.git.html"><span class="doc">Homebrew 源使用帮助</span></a></li>
 <li><a class="reference internal" href="homebrew-bottles.html"><span class="doc">Homebrew Bottles 源使用帮助</span></a></li>
+<li><a class="reference internal" href="homebrew-cask.git.html"><span class="doc">Homebrew Cask 源使用帮助</span></a></li>
+<li><span class="xref std std-doc">homebrew-cask-versions.git</span></li>
 </ul>
 </div>
 <div class="section" id="id5">
@@ -279,10 +296,6 @@
           </div>
           
 <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="homebrew-cask.git.html" class="btn btn-neutral float-right" title="Homebrew Cask 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="homebrew-bottles.html" class="btn btn-neutral float-left" title="Homebrew Bottles 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 

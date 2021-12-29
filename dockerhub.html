@@ -49,7 +49,9 @@
     
     <link rel="author" title="关于这些文档" href="about.html" />
     <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" /> 
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Docker CE 源使用帮助" href="docker-ce.html" />
+    <link rel="prev" title="Homebrew 源使用帮助" href="brew.git.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -132,17 +134,24 @@
 <li class="toctree-l1"><a class="reference internal" href="hackage.html">Hackage 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pypi.html">PyPI 镜像源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rubygems.html">Rubygems 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-crates.html">Rust Crates 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Docker Hub 源使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">使用说明</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">相关链接</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qt.html">QT 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archive.raspberrypi.org.html">Raspberrypi 源使用帮助</a></li>
@@ -223,7 +232,7 @@
 <h1>Docker Hub 源使用帮助<a class="headerlink" href="#docker-hub" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
 <h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://docker.mirrors.nju.edu.cn/">https://docker.mirrors.nju.edu.cn/</a></p>
+<p><a class="reference external" href="https://docker.nju.edu.cn/">https://docker.nju.edu.cn/</a></p>
 </div>
 <div class="section" id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
@@ -235,7 +244,7 @@
 <h3>Linux<a class="headerlink" href="#linux" title="永久链接至标题">¶</a></h3>
 <p>在配置文件 <code class="docutils literal notranslate"><span class="pre">/etc/docker/daemon.json</span></code> 中加入：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;registry-mirrors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;https://docker.mirrors.nju.edu.cn/&quot;</span><span class="p">]</span>
+  <span class="s2">&quot;registry-mirrors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;https://docker.nju.edu.cn/&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -250,16 +259,17 @@
 <li>打开 “Docker.app”</li>
 <li>进入偏好设置页面(快捷键 <code class="docutils literal notranslate"><span class="pre">⌘,</span></code> )</li>
 <li>打开 “Advanced” 选项卡</li>
-<li>在 “Registry mirrors” 中添加 <code class="docutils literal notranslate"><span class="pre">https://docker.mirrors.nju.edu.cn/</span></code></li>
+<li>在 “Registry mirrors” 中添加 <code class="docutils literal notranslate"><span class="pre">https://docker.nju.edu.cn/</span></code></li>
 <li>点击下方的 “Restart” 按钮</li>
 </ol>
 </div>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="永久链接至标题">¶</a></h3>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">待处理</p>
-<p class="last">windows平台的使用方法</p>
-</div>
+<ol class="arabic simple">
+<li>打开Settings-Docker Engine</li>
+<li>在registry-mirrors中添加https://docker.nju.edu.cn/</li>
+<li>点击Apply&amp;Restart</li>
+</ol>
 </div>
 </div>
 <div class="section" id="id4">
@@ -283,6 +293,10 @@
           </div>
           
 <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="docker-ce.html" class="btn btn-neutral float-right" title="Docker CE 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="brew.git.html" class="btn btn-neutral float-left" title="Homebrew 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

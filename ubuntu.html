@@ -129,11 +129,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">收录版本</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id5">使用说明</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id6">手动更改配置文件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">镜像下载</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">图形界面配置（新手推荐）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">手动更改配置文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">镜像下载</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id8">相关链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">相关链接</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ubuntu-ports.html">Ubuntu Ports 源使用帮助</a></li>
@@ -146,17 +147,13 @@
 <li class="toctree-l1"><a class="reference internal" href="hackage.html">Hackage 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pypi.html">PyPI 镜像源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rubygems.html">Rubygems 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-crates.html">Rust Crates 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dockerhub.html">Docker Hub 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qt.html">QT 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archive.raspberrypi.org.html">Raspberrypi 源使用帮助</a></li>
@@ -252,129 +249,75 @@
 <h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>所有 Ubuntu 当前支持的版本，包括开发版，具体版本见 <a class="reference external" href="https://wiki.ubuntu.com/Releases">https://wiki.ubuntu.com/Releases</a></p>
 <p>对于 Ubuntu 不再支持的版本，请参考 <a class="reference internal" href="ubuntu-old-releases.html"><span class="doc">Ubuntu Old Releases 源使用帮助</span></a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">releases</span>
-
-<span class="n">Current</span>
-
-<span class="n">Version</span> <span class="n">Code</span> <span class="n">name</span>   <span class="n">Docs</span>    <span class="n">Release</span> <span class="n">date</span>    <span class="n">End</span> <span class="n">of</span> <span class="n">Life</span> <span class="n">date</span>
-<span class="n">Ubuntu</span> <span class="mf">17.10</span>    <span class="n">Artful</span> <span class="n">Aardvark</span> <span class="n">Rel</span> <span class="mi">19</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">17</span>   <span class="n">Jul</span><span class="o">-</span><span class="mi">18</span>
-<span class="n">Ubuntu</span> <span class="mf">16.04</span><span class="o">.</span><span class="mi">3</span> <span class="n">LTS</span>  <span class="n">Xenial</span> <span class="n">Xerus</span>    <span class="n">Changes</span> <span class="mi">3</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">17</span>    <span class="n">Apr</span><span class="o">-</span><span class="mi">21</span>
-<span class="n">Ubuntu</span> <span class="mf">16.04</span><span class="o">.</span><span class="mi">2</span> <span class="n">LTS</span>  <span class="n">Xenial</span> <span class="n">Xerus</span>    <span class="n">Changes</span> <span class="mi">16</span><span class="o">-</span><span class="n">Feb</span><span class="o">-</span><span class="mi">17</span>   <span class="n">Apr</span><span class="o">-</span><span class="mi">21</span>
-<span class="n">Ubuntu</span> <span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span> <span class="n">LTS</span>  <span class="n">Xenial</span> <span class="n">Xerus</span>    <span class="n">Changes</span> <span class="mi">21</span><span class="o">-</span><span class="n">Jul</span><span class="o">-</span><span class="mi">16</span>   <span class="n">Apr</span><span class="o">-</span><span class="mi">21</span>
-<span class="n">Ubuntu</span> <span class="mf">16.04</span> <span class="n">LTS</span>    <span class="n">Xenial</span> <span class="n">Xerus</span>    <span class="n">Rel</span> <span class="mi">21</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">16</span>   <span class="n">Apr</span><span class="o">-</span><span class="mi">21</span>
-<span class="n">Ubuntu</span> <span class="mf">14.04</span><span class="o">.</span><span class="mi">5</span> <span class="n">LTS</span>  <span class="n">Trusty</span> <span class="n">Tahr</span> <span class="n">Changes</span> <span class="mi">4</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">16</span>    <span class="n">Apr</span><span class="o">-</span><span class="mi">19</span>
-<span class="n">Ubuntu</span> <span class="mf">14.04</span><span class="o">.</span><span class="mi">4</span> <span class="n">LTS</span>  <span class="n">Trusty</span> <span class="n">Tahr</span> <span class="n">Changes</span> <span class="mi">18</span><span class="o">-</span><span class="n">Feb</span><span class="o">-</span><span class="mi">16</span>   <span class="n">HWE</span> <span class="n">August</span> <span class="mi">2016</span>
-<span class="n">Ubuntu</span> <span class="mf">14.04</span><span class="o">.</span><span class="mi">3</span> <span class="n">LTS</span>  <span class="n">Trusty</span> <span class="n">Tahr</span> <span class="n">Changes</span> <span class="mi">6</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">15</span>    <span class="n">HWE</span> <span class="n">August</span> <span class="mi">2016</span>
-<span class="n">Ubuntu</span> <span class="mf">14.04</span><span class="o">.</span><span class="mi">2</span> <span class="n">LTS</span>  <span class="n">Trusty</span> <span class="n">Tahr</span> <span class="n">Changes</span> <span class="mi">20</span><span class="o">-</span><span class="n">Feb</span><span class="o">-</span><span class="mi">15</span>   <span class="n">HWE</span> <span class="n">August</span> <span class="mi">2016</span>
-<span class="n">Ubuntu</span> <span class="mf">14.04</span><span class="o">.</span><span class="mi">1</span> <span class="n">LTS</span>  <span class="n">Trusty</span> <span class="n">Tahr</span> <span class="n">Changes</span> <span class="mi">24</span><span class="o">-</span><span class="n">Jul</span><span class="o">-</span><span class="mi">14</span>   <span class="n">Apr</span><span class="o">-</span><span class="mi">19</span>
-<span class="n">Ubuntu</span> <span class="mf">14.04</span> <span class="n">LTS</span>    <span class="n">Trusty</span> <span class="n">Tahr</span> <span class="n">Rel</span> <span class="mi">17</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">14</span>   <span class="n">Apr</span><span class="o">-</span><span class="mi">19</span>
-
-<span class="n">Release</span> <span class="n">announcements</span> <span class="n">are</span> <span class="n">posted</span> <span class="n">on</span> <span class="n">the</span> <span class="n">ubuntu</span><span class="o">-</span><span class="n">announce</span> <span class="n">mailing</span> <span class="nb">list</span><span class="o">.</span>
-
-<span class="n">Future</span>
-
-<span class="n">Version</span> <span class="n">Code</span> <span class="n">name</span>   <span class="n">Docs</span>    <span class="n">Release</span> <span class="n">date</span>    <span class="n">End</span> <span class="n">of</span> <span class="n">Life</span> <span class="n">date</span>
-<span class="n">Ubuntu</span> <span class="mf">18.04</span> <span class="n">LTS</span>    <span class="n">Bionic</span> <span class="n">Beaver</span>       <span class="n">Apr</span><span class="o">-</span><span class="mi">18</span>
-
-<span class="n">End</span> <span class="n">of</span> <span class="n">Life</span>
-
-<span class="n">Version</span> <span class="n">Code</span> <span class="n">name</span>   <span class="n">Docs</span>    <span class="n">Release</span> <span class="n">date</span>    <span class="n">End</span> <span class="n">of</span> <span class="n">Life</span> <span class="n">date</span>
-<span class="n">Ubuntu</span> <span class="mf">17.04</span>    <span class="n">Zesty</span> <span class="n">Zapus</span> <span class="n">Rel</span> <span class="mi">13</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">17</span>   <span class="mi">13</span><span class="o">-</span><span class="n">Jan</span><span class="o">-</span><span class="mi">18</span>
-<span class="n">Ubuntu</span> <span class="mf">16.10</span>    <span class="n">Yakkety</span> <span class="n">Yak</span> <span class="n">Rel</span> <span class="mi">13</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">16</span>   <span class="mi">20</span><span class="o">-</span><span class="n">Jul</span><span class="o">-</span><span class="mi">17</span>
-<span class="n">Ubuntu</span> <span class="mf">15.10</span>    <span class="n">Wily</span> <span class="n">Werewolf</span>   <span class="n">Rel</span> <span class="mi">22</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">15</span>   <span class="mi">28</span><span class="o">-</span><span class="n">Jul</span><span class="o">-</span><span class="mi">16</span>
-<span class="n">Ubuntu</span> <span class="mf">15.04</span>    <span class="n">Vivid</span> <span class="n">Vervet</span>    <span class="n">Rel</span> <span class="mi">23</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">15</span>   <span class="mi">4</span><span class="o">-</span><span class="n">Feb</span><span class="o">-</span><span class="mi">16</span>
-<span class="n">Ubuntu</span> <span class="mf">14.10</span>    <span class="n">Utopic</span> <span class="n">Unicorn</span>  <span class="n">Rel</span> <span class="mi">23</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">14</span>   <span class="mi">23</span><span class="o">-</span><span class="n">Jul</span><span class="o">-</span><span class="mi">15</span>
-<span class="n">Ubuntu</span> <span class="mf">13.10</span>    <span class="n">Saucy</span> <span class="n">Salamander</span>    <span class="n">Rel</span> <span class="mi">17</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">13</span>   <span class="mi">17</span><span class="o">-</span><span class="n">Jul</span><span class="o">-</span><span class="mi">14</span>
-<span class="n">Ubuntu</span> <span class="mf">13.04</span>    <span class="n">Raring</span> <span class="n">Ringtail</span> <span class="n">Rel</span> <span class="mi">25</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">13</span>   <span class="mi">27</span><span class="o">-</span><span class="n">Jan</span><span class="o">-</span><span class="mi">14</span>
-<span class="n">Ubuntu</span> <span class="mf">12.10</span>    <span class="n">Quantal</span> <span class="n">Quetzal</span> <span class="n">Tech</span> <span class="o">/</span> <span class="n">Rel</span>  <span class="mi">18</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">12</span>   <span class="mi">16</span><span class="o">-</span><span class="n">May</span><span class="o">-</span><span class="mi">14</span>
-<span class="n">Ubuntu</span> <span class="mf">12.04</span><span class="o">.</span><span class="mi">5</span> <span class="n">LTS</span>  <span class="n">Precise</span> <span class="n">Pangolin</span>    <span class="n">Rel</span> <span class="mi">7</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">14</span>    <span class="mi">28</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">17</span>
-<span class="n">Ubuntu</span> <span class="mf">12.04</span><span class="o">.</span><span class="mi">4</span> <span class="n">LTS</span>  <span class="n">Precise</span> <span class="n">Pangolin</span>    <span class="n">Changes</span> <span class="mi">6</span><span class="o">-</span><span class="n">Feb</span><span class="o">-</span><span class="mi">14</span>    <span class="n">HWE</span> <span class="n">August</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2014</span>
-<span class="n">Ubuntu</span> <span class="mf">12.04</span><span class="o">.</span><span class="mi">3</span> <span class="n">LTS</span>  <span class="n">Precise</span> <span class="n">Pangolin</span>    <span class="n">Changes</span> <span class="mi">23</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">13</span>   <span class="n">HWE</span> <span class="n">August</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2014</span>
-<span class="n">Ubuntu</span> <span class="mf">12.04</span><span class="o">.</span><span class="mi">2</span> <span class="n">LTS</span>  <span class="n">Precise</span> <span class="n">Pangolin</span>    <span class="n">Changes</span> <span class="mi">14</span><span class="o">-</span><span class="n">Feb</span><span class="o">-</span><span class="mi">13</span>   <span class="n">HWE</span> <span class="n">August</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2014</span>
-<span class="n">Ubuntu</span> <span class="mf">12.04</span><span class="o">.</span><span class="mi">1</span> <span class="n">LTS</span>  <span class="n">Precise</span> <span class="n">Pangolin</span>    <span class="n">Changes</span> <span class="mi">24</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">12</span>   <span class="mi">28</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">17</span>
-<span class="n">Ubuntu</span> <span class="mf">12.04</span> <span class="n">LTS</span>    <span class="n">Precise</span> <span class="n">Pangolin</span>    <span class="n">Tech</span> <span class="o">/</span> <span class="n">Rel</span>  <span class="mi">26</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">12</span>   <span class="mi">28</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">17</span>
-<span class="n">Ubuntu</span> <span class="mf">11.10</span>    <span class="n">Oneiric</span> <span class="n">Ocelot</span>  <span class="n">Tech</span> <span class="o">/</span> <span class="n">Rel</span>  <span class="mi">13</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">11</span>   <span class="mi">9</span><span class="o">-</span><span class="n">May</span><span class="o">-</span><span class="mi">13</span>
-<span class="n">Ubuntu</span> <span class="mf">11.04</span>    <span class="n">Natty</span> <span class="n">Narwhal</span>   <span class="n">Tech</span> <span class="o">/</span> <span class="n">Rel</span>  <span class="mi">28</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">11</span>   <span class="mi">28</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">12</span>
-<span class="n">Ubuntu</span> <span class="mf">10.10</span>    <span class="n">Maverick</span> <span class="n">Meerkat</span>    <span class="n">Tech</span> <span class="o">/</span> <span class="n">Rel</span>  <span class="mi">10</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">10</span>   <span class="mi">10</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">12</span>
-<span class="n">Ubuntu</span> <span class="mf">10.04</span><span class="o">.</span><span class="mi">4</span> <span class="n">LTS</span>  <span class="n">Lucid</span> <span class="n">Lynx</span>  <span class="n">Changes</span> <span class="mi">16</span><span class="o">-</span><span class="n">Feb</span><span class="o">-</span><span class="mi">12</span>   <span class="n">May</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2013</span> <span class="p">(</span><span class="n">Desktop</span><span class="p">)</span>
-                <span class="n">April</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2015</span> <span class="p">(</span><span class="n">Server</span><span class="p">)</span>
-<span class="n">Ubuntu</span> <span class="mf">10.04</span><span class="o">.</span><span class="mi">3</span> <span class="n">LTS</span>  <span class="n">Lucid</span> <span class="n">Lynx</span>  <span class="n">Changes</span> <span class="mi">21</span><span class="o">-</span><span class="n">Jul</span><span class="o">-</span><span class="mi">11</span>
-<span class="n">Ubuntu</span> <span class="mf">10.04</span><span class="o">.</span><span class="mi">2</span> <span class="n">LTS</span>  <span class="n">Lucid</span> <span class="n">Lynx</span>  <span class="n">Changes</span> <span class="mi">18</span><span class="o">-</span><span class="n">Feb</span><span class="o">-</span><span class="mi">11</span>
-<span class="n">Ubuntu</span> <span class="mf">10.04</span><span class="o">.</span><span class="mi">1</span> <span class="n">LTS</span>  <span class="n">Lucid</span> <span class="n">Lynx</span>  <span class="n">Changes</span> <span class="mi">17</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">10</span>
-<span class="n">Ubuntu</span> <span class="mf">10.04</span> <span class="n">LTS</span>    <span class="n">Lucid</span> <span class="n">Lynx</span>  <span class="n">Tech</span> <span class="o">/</span> <span class="n">Rel</span>  <span class="mi">29</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">10</span>
-<span class="n">Ubuntu</span> <span class="mf">10.04</span>    <span class="n">Lucid</span> <span class="n">Lynx</span> <span class="p">(</span><span class="n">Desktop</span><span class="p">)</span>    <span class="n">Changes</span> <span class="mi">16</span><span class="o">-</span><span class="n">Feb</span><span class="o">-</span><span class="mi">12</span>   <span class="mi">9</span><span class="o">-</span><span class="n">May</span><span class="o">-</span><span class="mi">13</span>
-<span class="n">Ubuntu</span> <span class="mf">9.10</span> <span class="n">Karmic</span> <span class="n">Koala</span>    <span class="n">Tech</span> <span class="o">/</span> <span class="n">Rel</span>  <span class="mi">29</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">09</span>   <span class="mi">30</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">11</span>
-<span class="n">Ubuntu</span> <span class="mf">9.04</span> <span class="n">Jaunty</span> <span class="n">Jackalope</span>    <span class="n">Tech</span> <span class="o">/</span> <span class="n">Rel</span>  <span class="mi">23</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">09</span>   <span class="mi">23</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">10</span>
-<span class="n">Ubuntu</span> <span class="mf">8.10</span> <span class="n">Intrepid</span> <span class="n">Ibex</span>   <span class="n">Rel</span> <span class="mi">30</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">08</span>   <span class="mi">30</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">10</span>
-<span class="n">Ubuntu</span> <span class="mf">8.04</span><span class="o">.</span><span class="mi">4</span> <span class="n">LTS</span>   <span class="n">Hardy</span> <span class="n">Heron</span> <span class="p">(</span><span class="n">Server</span><span class="p">)</span>    <span class="n">Changes</span> <span class="mi">28</span><span class="o">-</span><span class="n">Jan</span><span class="o">-</span><span class="mi">10</span>   <span class="mi">9</span><span class="o">-</span><span class="n">May</span><span class="o">-</span><span class="mi">13</span>
-<span class="n">Ubuntu</span> <span class="mf">8.04</span><span class="o">.</span><span class="mi">3</span> <span class="n">LTS</span>   <span class="n">Hardy</span> <span class="n">Heron</span> <span class="n">Changes</span> <span class="mi">16</span><span class="o">-</span><span class="n">Jul</span><span class="o">-</span><span class="mi">09</span>
-<span class="n">Ubuntu</span> <span class="mf">8.04</span><span class="o">.</span><span class="mi">2</span> <span class="n">LTS</span>   <span class="n">Hardy</span> <span class="n">Heron</span> <span class="n">Changes</span> <span class="mi">22</span><span class="o">-</span><span class="n">Jan</span><span class="o">-</span><span class="mi">09</span>
-<span class="n">Ubuntu</span> <span class="mf">8.04</span><span class="o">.</span><span class="mi">1</span> <span class="n">LTS</span>   <span class="n">Hardy</span> <span class="n">Heron</span> <span class="n">Hardy</span> <span class="n">Heron</span> <span class="mi">3</span><span class="o">-</span><span class="n">Jul</span><span class="o">-</span><span class="mi">08</span>
-<span class="n">Ubuntu</span> <span class="mf">8.04</span> <span class="n">LTS</span> <span class="n">Hardy</span> <span class="n">Heron</span> <span class="n">Hardy</span> <span class="n">Heron</span><span class="o">/</span><span class="n">Rel</span> <span class="mi">24</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">08</span>
-<span class="n">Ubuntu</span> <span class="mf">8.04</span> <span class="n">Hardy</span> <span class="n">Heron</span> <span class="p">(</span><span class="n">Desktop</span><span class="p">)</span>   <span class="n">Rel</span> <span class="mi">24</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">08</span>   <span class="mi">12</span><span class="o">-</span><span class="n">May</span><span class="o">-</span><span class="mi">11</span>
-<span class="n">Ubuntu</span> <span class="mf">7.10</span> <span class="n">Gutsy</span> <span class="n">Gibbon</span>    <span class="n">Rel</span> <span class="mi">18</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">07</span>   <span class="n">April</span> <span class="mi">18</span><span class="n">th</span><span class="p">,</span> <span class="mi">2009</span>
-<span class="n">Ubuntu</span> <span class="mf">7.04</span> <span class="n">Feisty</span> <span class="n">Fawn</span> <span class="n">Rel</span> <span class="mi">19</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">07</span>   <span class="mi">19</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">08</span>
-<span class="n">Ubuntu</span> <span class="mf">6.10</span> <span class="n">Edgy</span> <span class="n">Eft</span>        <span class="mi">26</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">06</span>   <span class="mi">26</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">08</span>
-<span class="n">Ubuntu</span> <span class="mf">6.06</span><span class="o">.</span><span class="mi">2</span> <span class="n">LTS</span>   <span class="n">Dapper</span> <span class="n">Drake</span> <span class="p">(</span><span class="n">Server</span><span class="p">)</span>       <span class="mi">21</span><span class="o">-</span><span class="n">Jan</span><span class="o">-</span><span class="mi">08</span>   <span class="mi">1</span><span class="o">-</span><span class="n">Jun</span><span class="o">-</span><span class="mi">11</span>
-<span class="n">Ubuntu</span> <span class="mf">6.06</span><span class="o">.</span><span class="mi">1</span> <span class="n">LTS</span>   <span class="n">Dapper</span> <span class="n">Drake</span>        <span class="mi">10</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">06</span>
-<span class="n">Ubuntu</span> <span class="mf">6.06</span> <span class="n">LTS</span> <span class="n">Dapper</span> <span class="n">Drake</span>    <span class="n">Rel</span> <span class="mi">1</span><span class="o">-</span><span class="n">Jun</span><span class="o">-</span><span class="mi">06</span>
-<span class="n">Ubuntu</span> <span class="mf">6.06</span> <span class="n">Dapper</span> <span class="n">Drake</span> <span class="p">(</span><span class="n">Desktop</span><span class="p">)</span>  <span class="n">Rel</span> <span class="mi">1</span><span class="o">-</span><span class="n">Jun</span><span class="o">-</span><span class="mi">06</span>    <span class="mi">14</span><span class="o">-</span><span class="n">Jul</span><span class="o">-</span><span class="mi">09</span>
-<span class="n">Ubuntu</span> <span class="mf">5.10</span> <span class="n">Breezy</span> <span class="n">Badger</span>   <span class="n">Rel</span> <span class="mi">12</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">05</span>   <span class="mi">13</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">07</span>
-<span class="n">Ubuntu</span> <span class="mf">5.04</span> <span class="n">Hoary</span> <span class="n">Hedgehog</span>      <span class="mi">8</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">05</span>    <span class="mi">31</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">06</span>
-<span class="n">Ubuntu</span> <span class="mf">4.10</span> <span class="n">Warty</span> <span class="n">Warthog</span>       <span class="mi">26</span><span class="o">-</span><span class="n">Oct</span><span class="o">-</span><span class="mi">04</span>   <span class="mi">30</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">06</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="id5">
 <h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id6">
-<h3>手动更改配置文件<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<h3>图形界面配置（新手推荐）<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>依次打开：系统设置，软件和更新。在 <code class="docutils literal notranslate"><span class="pre">下载自</span></code> 中选择 <code class="docutils literal notranslate"><span class="pre">其他站点</span></code>，然后在中国的条目下选择 <code class="docutils literal notranslate"><span class="pre">mirrors.nju.edu.cn</span></code>。</p>
+</div>
+<div class="section" id="id7">
+<h3>手动更改配置文件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
 <p class="last">操作前请做好相应备份</p>
 </div>
 <p>一般情况下，将 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件中 Ubuntu 默认的源地址 <code class="docutils literal notranslate"><span class="pre">http://archive.ubuntu.com/</span></code>
-替换为 <code class="docutils literal notranslate"><span class="pre">http://mirrors.nju.edu.cn</span></code> 即可。</p>
+替换为 <code class="docutils literal notranslate"><span class="pre">http://mirrors.nju.edu.cn/</span></code> 即可。</p>
 <p>可以使用如下命令：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/archive.ubuntu.com/mirrors.nju.edu.cn/g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">如果你在安装时选择的语言不是英语，默认的源地址通常不是 <code class="docutils literal notranslate"><span class="pre">http://archive.ubuntu.com/</span></code> ，
-而是 <code class="docutils literal notranslate"><span class="pre">http://&lt;country-code&gt;.archive.ubuntu.com/ubuntu/</span></code> ，如 <code class="docutils literal notranslate"><span class="pre">http://cn.archive.ubuntu.com/ubuntu/</span></code> ，
+<p class="last">Ubuntu 图形安装器会根据用户设定的时区推断 locale，这导致默认的源地址通常不是 <code class="docutils literal notranslate"><span class="pre">http://archive.ubuntu.com/</span></code>，
+而是 <code class="docutils literal notranslate"><span class="pre">http://&lt;country-code&gt;.archive.ubuntu.com/ubuntu/</span></code> ，如 <code class="docutils literal notranslate"><span class="pre">http://cn.archive.ubuntu.com/ubuntu/</span></code>，
 此时只需将上面的命令进行相应的替换即可，即
-<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'s/cn.archive.ubuntu.com/mirrors.nju.edu.cn/g'</span> <span class="pre">/etc/apt/sources.list</span></code> 。</p>
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'s/cn.archive.ubuntu.com/mirrors.nju.edu.cn/g'</span> <span class="pre">/etc/apt/sources.list</span></code>。</p>
 </div>
-<p>当然也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件（需要使用 sudo）。以下是 Ubuntu 16.04 参考配置内容：</p>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p class="last">因镜像站同步有延迟，可能会导致生产环境系统不能及时检查、安装上最新的安全更新，不建议替换 security 源。
+如果有官方源下载速度不理想等问题，想通过镜像站下载安全更新，
+可以将 security 源地址从 <code class="docutils literal notranslate"><span class="pre">http://security.ubuntu.com/</span></code> 替换为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.nju.edu.cn/</span></code>，即
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'s/security.ubuntu.com/mirrors.nju.edu.cn/g'</span> <span class="pre">/etc/apt/sources.list</span></code>。</p>
+</div>
+<p>当然也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件（需要使用 sudo）。以下是 Ubuntu 20.04 参考配置内容：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 默认注释了源码仓库，如有需要可自行取消注释</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="c1"># deb-src https://mirrors.nju.edu.cn/ubuntu/ xenial main restricted universe multiverse</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="c1"># deb-src https://mirrors.nju.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="c1"># deb-src https://mirrors.nju.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="c1"># deb-src https://mirrors.nju.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span>
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.nju.edu.cn/ubuntu/ focal main restricted universe multiverse</span>
+
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.nju.edu.cn/ubuntu/ focal-security main restricted universe multiverse</span>
+
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.nju.edu.cn/ubuntu/ focal-updates main restricted universe multiverse</span>
+
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.nju.edu.cn/ubuntu/ focal-backports main restricted universe multiverse</span>
 
 <span class="c1"># 预发布软件源，不建议启用</span>
-<span class="c1"># deb https://mirrors.nju.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse</span>
-<span class="c1"># deb-src https://mirrors.nju.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse</span>
+<span class="c1"># deb https://mirrors.nju.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span>
+<span class="c1"># deb-src https://mirrors.nju.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span>
 </pre></div>
 </div>
 <p>更改完 <code class="file docutils literal notranslate"><span class="pre">sources.list</span></code> 文件后请运行 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 更新索引以生效。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
+<p class="last">如要用于其他版本，把 focal 换成其他版本代号即可: 20.04：<code class="docutils literal notranslate"><span class="pre">focal</span></code>；18.04：<code class="docutils literal notranslate"><span class="pre">bionic</span></code>；16.04：<code class="docutils literal notranslate"><span class="pre">xenial</span></code>；14.04：<code class="docutils literal notranslate"><span class="pre">trusty</span></code>。</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
 <p class="last">使用 HTTPS 可以有效避免国内运营商的缓存劫持。</p>
 </div>
 </div>
-<div class="section" id="id7">
-<h3>镜像下载<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id8">
+<h3>镜像下载<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <p>如果需要下载 Ubuntu 的 ISO 镜像以便安装，请参考 <a class="reference internal" href="ubuntu-releases.html"><span class="doc">Ubuntu Releases 源使用帮助</span></a></p>
 </div>
 </div>
-<div class="section" id="id8">
-<h2>相关链接<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id9">
+<h2>相关链接<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
